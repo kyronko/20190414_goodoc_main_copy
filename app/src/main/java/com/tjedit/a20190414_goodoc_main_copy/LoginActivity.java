@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (userid.equals("tjeit") && userPw.equals("qwer1234")) {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(LoginActivity.this, "로그인에 실패하였습니다.\n ID / PW를 확인해주세요.", Toast.LENGTH_SHORT).show();
 
