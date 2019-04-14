@@ -29,17 +29,22 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String userid = userIdEdt.getText().toString();
+                String userId = userIdEdt.getText().toString();
                 String userPw = userPwEdt.getText().toString();
 
-                if (userid.equals("tjeit") && userPw.equals("qwer1234")) {
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                } else {
-                    Toast.makeText(LoginActivity.this, "로그인에 실패하였습니다.\n ID / PW를 확인해주세요.", Toast.LENGTH_SHORT).show();
-
-                }
+//                if (userId.equals("tjeit") && userPw.equals("qwer1234")) {
+//                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                    startActivity(intent);
+//                    finish();
+//                } else {
+//                    Toast.makeText(LoginActivity.this, "로그인에 실패하였습니다.\n ID / PW를 확인해주세요.", Toast.LENGTH_SHORT).show();
+//
+//                }
+//                입력한 아이디를 들고 메인으로 이동.
+                Intent intent = new Intent(LoginActivity.this , MainActivity.class);
+//                메인화면으로 갈때 "사용자 아이디" 라는 꼬리표로 userId에 들어있는 값을 들고감.
+                intent.putExtra("사용자아이디", userId);
+                startActivity(intent);
             }
         });
 
