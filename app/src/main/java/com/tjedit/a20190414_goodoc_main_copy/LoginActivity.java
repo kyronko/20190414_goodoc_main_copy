@@ -1,5 +1,6 @@
 package com.tjedit.a20190414_goodoc_main_copy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +33,8 @@ public class LoginActivity extends AppCompatActivity {
                 String userPw = userPwEdt.getText().toString();
 
                 if (userid.equals("tjeit") && userPw.equals("qwer1234")) {
-
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(LoginActivity.this, "로그인에 실패하였습니다.\n ID / PW를 확인해주세요.", Toast.LENGTH_SHORT).show();
 
