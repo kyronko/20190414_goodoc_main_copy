@@ -9,49 +9,58 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- ctrl + space 자동완성 목록 소환-->
     <ImageView
-
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/tje_it_log01" />
-
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:padding="50dp"
+        android:padding="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="vertical">
-
         <EditText
-            android:layout_marginBottom="30dp"
+            android:id="@+id/userIdEdt"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User ID" />
-
+            android:hint="User ID"
+            android:singleLine="true"/>
         <EditText
-            android:layout_marginBottom="30dp"
+            android:id="@+id/userPwEdt"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="PassWord" />
+            android:hint="PassWord"
+            android:singleLine="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="로그인" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="회원가입" />
+            <Button
+                android:id="@+id/LoginBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="로그인"/>
+            <Button
+                android:enabled="false"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="회원가입"/>
+        </LinearLayout>
     </LinearLayout>
-
     <TextView
-        android:layout_marginTop="50dp"
+        android:id="@+id/contentTxt"
+        android:layout_marginTop="80dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WASAVILOGISTICS"
+        android:text="WASAVI LOGISTICS"
         android:textColor="#FFFFFF"/>
 </LinearLayout>
